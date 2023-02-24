@@ -1,1 +1,97 @@
-.main-container {}
+$bg-color: linear-gradient(120deg, #343a4f, #0f1620);
+$lightblue: #3d9dea;
+$darkblue: #4a4eee;
+$text-color: #d5e1ef;
+
+html,
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-image: linear-gradient(90deg, #414850, #131720);
+	color: $text-color;
+}
+
+*,
+button,
+span,
+a {
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	object-fit: contain;
+	-o-object-fit: contain;
+}
+
+.main-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	font-family: OpenSans, sans-serif;
+}
+
+.item-card {
+	max-width: 350px;
+	width: 100%;
+	border-radius: 30px;
+	overflow: hidden;
+	background-image: $bg-color;
+}
+
+.item-card__overview,
+.item-card__spec {
+	padding: 24px;
+}
+
+.item-card__overview {
+	background-image: linear-gradient(176deg, $lightblue, $darkblue);
+}
+
+.overview {}
+
+.overview__actions {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 2rem;
+}
+
+.back-button {}
+
+.cart-button {
+
+	&--neuro {
+
+	}
+}
+
+.overview__info {}
+
+.info {}
+
+.info__desc {}
+
+.info__img {
+	img {
+		width: 90%;
+		height: auto;
+	}
+}
+
+/* item card specifications */
+.item-card__spec {}
+
+.spec {}
+
+.spec__features {}
+
+.feature {}
+
+.checkout {}
+
+.checkout__price {}
