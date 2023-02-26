@@ -19,6 +19,16 @@ a {
 	box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
 img {
 	display: block;
 	object-fit: contain;
@@ -50,6 +60,7 @@ img {
 }
 
 .item-card__overview {
+	width: 100%;
 	background-image: linear-gradient(176deg, $lightblue, $darkblue);
 }
 
@@ -58,39 +69,122 @@ img {
 .overview__actions {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 0 2rem;
+	margin: 0 0 32px 0;
 }
 
-.back-button {}
+.back-button,
+.cart-button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
 
 .cart-button {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 11px;
+		right: 8px;
+		display: block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-image: linear-gradient(90deg, #489be2, #0f629c);
+	}
 
 	&--neuro {
-
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: $bg-color;
+		box-shadow: inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1),
+								inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1),
+								-2px -2px 8px 2px rgba(255, 255, 255, 0.1),
+								2px 2px 6px 3px rgba(0, 0, 0, 0.4);
 	}
 }
 
-.overview__info {}
+.overview__info {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100px;
+	margin: 0 0 50px 0;
+}
 
 .info {}
 
-.info__desc {}
+.info__desc {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 12px 0;
+
+	h3 {
+		font-size: 16px;
+		margin: 0 0 3px 0;
+	}
+
+	p {
+		font-size: 13px;
+		opacity: 0.8;
+	}
+}
 
 .info__img {
+	position: absolute;
+	width: 300px;
+	height: auto;
+	transform: translate(32%, -3%);
+	transition: all ease 1.3s;
 	img {
-		width: 90%;
+		width: 70%;
 		height: auto;
+
+		&:hover {
+			transition: all ease 1.3s;
+			animation: none;
+			transform: translate(22%, 15%) rotate(10deg);
+		}
 	}
 }
 
 /* item card specifications */
-.item-card__spec {}
+.item-card__spec {
+	h1 {
+		font-size: 22px;
+		margin: 10px 0 12px 0;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 1.5;
+		opacity: 0.8;
+	}
+}
 
 .spec {}
 
-.spec__features {}
+.spec__features {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-row-gap: 16px;
+	margin: 20px 0 0 0;
+}
 
-.feature {}
+.feature {
+	display: flex;
+}
+
+.feature__icon {
+	width: 15px;
+	height: 20px;
+	background-image: $bg-color;
+	border-radius: 8px;
+	margin-right: 14px;
+}
 
 .checkout {}
 
