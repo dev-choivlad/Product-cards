@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dev-choivlad/Gulp-boilerplate.git"
+    "url": "git+https://github.com/dev-choivlad/Product-cards"
   },
   "keywords": [
     "gulp",
@@ -27,10 +27,7 @@
   ],
   "author": "Vlad Choi",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dev-choivlad/Gulp-boilerplate/issues"
-  },
-  "homepage": "https://github.com/dev-choivlad/Gulp-boilerplate#readme",
+  "homepage": "https://dev-choivlad.github.io/Product-cards",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/polyfill": "^7.12.1",
